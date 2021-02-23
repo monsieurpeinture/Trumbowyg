@@ -1,5 +1,5 @@
 /**
- * Trumbowyg v2.23.0 - A lightweight WYSIWYG editor
+ * Trumbowyg v2.24.0 - A lightweight WYSIWYG editor
  * Trumbowyg core file
  * ------------------------
  * @link http://alex-d.github.io/Trumbowyg
@@ -1554,10 +1554,7 @@ Object.defineProperty(jQuery.trumbowyg, 'defaultOptions', {
             // Build out of ModalBox, it's the mask for animations
             var $modal = $('<div/>', {
                 class: prefix + 'modal ' + prefix + 'fixed-top'
-            }).css({
-                top: t.$box.offset().top + t.$btnPane.height(),
-                zIndex: 99999
-            }).appendTo($(t.doc.body));
+            }).appendTo($(t.$btnPane));
 
             // Click on overlay close modal by cancelling them
             t.$overlay.one('click', function () {

@@ -1,5 +1,5 @@
 /**
- * Trumbowyg v2.23.0 - A lightweight WYSIWYG editor
+ * Trumbowyg v2.24.0 - A lightweight WYSIWYG editor
  * Default stylesheet for Trumbowyg editor
  * ------------------------
  * @link http://alex-d.github.io/Trumbowyg
@@ -174,7 +174,8 @@
   .trumbowyg-button-pane button.trumbowyg-disable,
   .trumbowyg-disabled .trumbowyg-button-pane button:not(.trumbowyg-not-disable):not(.trumbowyg-viewHTML-button) {
     opacity: 0.2;
-    cursor: default; }
+    cursor: default;
+    pointer-events: none; }
   .trumbowyg-button-pane.trumbowyg-disable .trumbowyg-button-group::before,
   .trumbowyg-disabled .trumbowyg-button-pane .trumbowyg-button-group::before {
     background: #e3e9eb; }
@@ -238,6 +239,8 @@
 /* Modal box */
 .trumbowyg-modal {
   position: absolute;
+  top: 100% !important;
+  z-index: +1;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
